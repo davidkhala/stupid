@@ -1,13 +1,13 @@
 {
-  "peer_addr": "peer0.org1.example.com:7051",
-  "orderer_addr": "orderer.example.com:7050",
-  "channel": "mychannel",
-  "chaincode": "mycc",
+  "peer_addr": "peer0.icdd:7051",
+  "orderer_addr": "orderer.delphi:7050",
+  "channel": "allchannel",
+  "chaincode": "stupid",
   "args": ["put", "key", "value"],
-  "mspid": "Org1MSP",
-  "private_key": "/path/to/private.key",
-  "sign_cert": "/path/to/sign.cert",
-  "tls_ca_certs": ["/path/to/peer/tls/ca/cert","/path/to/orderer/tls/ca/cert"],
+  "mspid": "icddMSP",
+  "private_key": "/root/MSPROOT/peerOrganizations/icdd/client/clientKey",
+  "sign_cert": "/root/MSPROOT/peerOrganizations/icdd/client/clientCert",
+  "tls_ca_certs": ["/root/MSPROOT/peerOrganizations/icdd/tlsca/tlsca.icdd-cert.pem","/root/MSPROOT/ordererOrganizations/delphi/tlsca/tlsca.delphi-cert.pem"],
   "num_of_conn": 20,
   "client_per_conn": 40
 }
