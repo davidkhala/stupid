@@ -7,6 +7,6 @@ build() {
 run() {
   local times=${1:-40000}
   docker system prune --force
-  docker run --name=stupidInstance --network="delphiNetwork" --mount source=MSPROOT,destination=/root/MSPROOT/ --mount source=$CURRENT/config.json,destination=/root/config.json stupid-image /root/stupid config.json $times # --detach
+  docker run --name=stupidInstance --network="delphiNetwork" --mount source=MSPROOT,destination=/root/MSPROOT/ --mount type=bind,source=$CURRENT/config.json,destination=/root/config.json stupid-image /root/stupid config.json $times # --detach
 }
 $1 $2
