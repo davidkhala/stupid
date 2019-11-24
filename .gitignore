@@ -13,4 +13,5 @@ stupid
 *.out
 
 # Files from IDE
-*.idea/
+.idea
+vendor
